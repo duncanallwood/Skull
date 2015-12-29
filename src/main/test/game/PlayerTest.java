@@ -49,9 +49,9 @@ public class PlayerTest {
 	@Test
 	public void testPlaySkullPutsSkullFromHandToTable() {
 		Game game = Game.newGame(1);
-		Player player = game.playerAtPosition(1);
+		Player player = game.playerAtPosition(0);
 		
-		//TODO play skull method
+		player.playSkull(game.table());
 		
 		testNoOfSkullsAndFlowers(player.hand(), 0, 3);
 		testNoOfSkullsAndFlowers(game.table().cards, 1, 0);
@@ -59,10 +59,12 @@ public class PlayerTest {
 	
 	@Test
 	public void testPlayFlowerPutsFlowerFromHandToTable() {
-		Player player = Player.newPlayer();
-		player.playFlower();
+		Game game = Game.newGame(1);
+		Player player = game.playerAtPosition(0);
+
+		player.playFlower(game.table());
 		
 		testNoOfSkullsAndFlowers(player.hand(), 1, 2);
-		testNoOfSkullsAndFlowers(player.getTable(), 0, 1);
+		testNoOfSkullsAndFlowers(game.table().cards, 0, 1);
 	}
 }
