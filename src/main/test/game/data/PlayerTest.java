@@ -1,7 +1,11 @@
-package game;
+package game.data;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import game.data.Card;
+import game.data.Game;
+import game.data.Player;
+import game.data.Side;
 
 import java.util.List;
 

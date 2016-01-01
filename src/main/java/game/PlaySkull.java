@@ -3,6 +3,9 @@ package game;
 import java.util.ArrayList;
 import java.util.List;
 
+import game.data.Names;
+import game.data.Player;
+
 public class PlaySkull {
 	private List<Player> players;
 	

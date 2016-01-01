@@ -1,5 +1,8 @@
 package game;
 
+import game.data.Game;
+import game.data.Player;
+
 import java.util.Map;
 
 import org.junit.Assert;
